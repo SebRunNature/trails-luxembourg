@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avertissement – Trails Luxembourg</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --cream:#f5f0e8;--cream2:#ede7d9;
+  --green:#5a8f6a;--green-dark:#3a6b4a;
+  --text:#1c2b22;--muted:#7a8878;
+  --border:rgba(58,107,74,0.13);
+  --orange:#fd8a00;
+  --paper:#faf8f4;
+}
+html,body{min-height:100%;background:var(--paper);font-family:'DM Sans',sans-serif;font-weight:300;color:var(--text);}
+
+/* ── HEADER ── */
+.header{
+  background:linear-gradient(135deg,#2d6e42 0%,#3a8a52 40%,#4aaa64 70%,#5ac878 100%);
+  padding:20px 24px 54px;
+  position:relative;
+}
+.header::after{
+  content:'';
+  position:absolute;bottom:0;left:0;right:0;height:52px;
+  background:var(--paper);
+  clip-path:ellipse(55% 100% at 50% 100%);
+}
+.header-inner{position:relative;z-index:2;display:flex;align-items:center;gap:14px;}
+.back-btn{
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(255,255,255,0.2);border:none;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;flex-shrink:0;text-decoration:none;
+  transition:background 0.2s;
+}
+.back-btn:hover{background:rgba(255,255,255,0.35);}
+.back-btn svg{width:18px;height:18px;stroke:white;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+.header-title{
+  font-family:'Fraunces',serif;font-size:20px;font-weight:300;
+  color:white;letter-spacing:0.02em;
+}
+
+/* ── CONTENT ── */
+.content{max-width:640px;margin:0 auto;padding:32px 24px 60px;}
+
+.section{
+  background:white;border:1.5px solid var(--border);
+  border-radius:20px;padding:28px 24px;margin-bottom:20px;
+}
+
+.section-icon{
+  width:44px;height:44px;border-radius:14px;
+  background:var(--cream);display:flex;align-items:center;
+  justify-content:center;font-size:22px;margin-bottom:16px;
+}
+
+.section-title{
+  font-family:'Fraunces',serif;font-size:18px;font-weight:400;
+  color:var(--text);margin-bottom:10px;
+}
+
+.section p{
+  font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:10px;
+}
+.section p:last-child{margin-bottom:0;}
+
+/* ── CHECKLIST ── */
+.checklist{list-style:none;margin:12px 0 0;}
+.checklist li{
+  font-size:13px;color:var(--text);
+  padding:10px 14px;border-radius:12px;
+  background:var(--cream);margin-bottom:8px;
+  display:flex;align-items:flex-start;gap:10px;
+  line-height:1.5;
+}
+.checklist li:last-child{margin-bottom:0;}
+.checklist li::before{
+  content:'✓';color:var(--green);font-weight:600;
+  font-size:14px;flex-shrink:0;margin-top:1px;
+}
+
+/* ── WARNING BOX ── */
+.warning-box{
+  background:#fff8f0;border:1.5px solid rgba(253,138,0,0.25);
+  border-radius:16px;padding:18px 20px;margin-bottom:20px;
+  display:flex;gap:14px;align-items:flex-start;
+}
+.warning-box svg{width:22px;height:22px;flex-shrink:0;margin-top:1px;}
+.warning-box p{font-size:13px;color:var(--text);line-height:1.65;}
+.warning-box strong{color:var(--orange);}
+
+/* ── SIGNATURE ── */
+.signature{
+  text-align:center;padding:24px;
+  font-family:'Fraunces',serif;font-size:15px;font-weight:300;
+  font-style:italic;color:var(--muted);
+}
+
+/* ── FOOTER BTN ── */
+.footer-btn{
+  display:flex;justify-content:center;margin-top:8px;
+}
+.btn-back{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--green);color:white;
+  padding:14px 32px;border-radius:50px;
+  font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;
+  text-decoration:none;letter-spacing:0.04em;
+  transition:background 0.2s,transform 0.15s;
+}
+.btn-back:hover{background:var(--green-dark);transform:translateY(-1px);}
+.btn-back svg{width:16px;height:16px;stroke:white;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-inner">
+    <a href="index.html" class="back-btn" aria-label="Retour">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </a>
+    <div class="header-title">Avertissement</div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <!-- Warning box -->
+  <div class="warning-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fd8a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+    </svg>
+    <p><strong>Important :</strong> Les informations disponibles dans cette application sont fournies à titre indicatif. Elles ne remplacent pas une préparation sérieuse et une bonne connaissance du terrain.</p>
+  </div>
+
+  <!-- Section 1 -->
+  <div class="section">
+    <div class="section-icon">🗺️</div>
+    <div class="section-title">Données GPX & informations des sentiers</div>
+    <p>Les tracés GPX, distances, dénivelés et descriptions disponibles dans cette application sont basés sur mes expériences personnelles de terrain.</p>
+    <p>Ces données peuvent ne pas refléter l'état actuel des sentiers — fermetures temporaires, modifications de tracé, dégradations météo ou travaux forestiers peuvent survenir à tout moment.</p>
+    <p>Je décline toute responsabilité en cas d'accident, blessure, perte ou dommage résultant directement ou indirectement de l'utilisation de ces données.</p>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="section">
+    <div class="section-icon">⚠️</div>
+    <div class="section-title">Ta responsabilité avant de partir</div>
+    <p>Randonner et courir en nature comporte des risques inhérents. Tu es le seul responsable de ta sécurité et de celle des personnes qui t'accompagnent.</p>
+    <ul class="checklist">
+      <li>Vérifie les conditions météo avant et pendant ta sortie</li>
+      <li>Contrôle l'état du sentier — fermetures, travaux, glissements</li>
+      <li>Évalue ton niveau physique et technique par rapport au parcours</li>
+      <li>Prévois un équipement adapté — chaussures, vêtements, eau, nourriture</li>
+      <li>Informe quelqu'un de ton itinéraire et de ton heure de retour prévue</li>
+      <li>Garde ton téléphone chargé et un moyen de communication</li>
+    </ul>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="section">
+    <div class="section-icon">📍</div>
+    <div class="section-title">Utilisation des fichiers GPX</div>
+    <p>Les fichiers GPX sont un outil d'aide à la navigation. Ils ne remplacent pas une carte officielle ni une bonne connaissance du terrain.</p>
+    <p>Certains sentiers peuvent manquer de balisage — dans ce cas, le fichier GPX est indispensable. En cas de doute sur ta position ou ta sécurité, fais demi-tour.</p>
+    <p>Pour les tracés officiels homologués, réfère-toi toujours aux informations publiées par <a href="https://www.visitluxembourg.com" target="_blank" style="color:var(--green);">Visit Luxembourg</a> et les gestionnaires locaux.</p>
+  </div>
+
+  <!-- Signature -->
+  <div class="signature">
+    Bonne rando — et surtout, reviens entier ! 🏔️<br>
+    <span style="font-size:12px;margin-top:6px;display:block;">Sébastien – Seb Run Nature</span>
+  </div>
+
+  <!-- Bouton retour -->
+  <div class="footer-btn">
+    <a href="index.html" class="btn-back">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Retour à l'application
+    </a>
+  </div>
+
+</div>
+</body>
+</html>
