@@ -2,7 +2,7 @@
 //  Trails Luxembourg – Service Worker v1.0
 // ═══════════════════════════════════════════
 
-const CACHE_NAME = 'trails-lu-v12';
+const CACHE_NAME = 'trails-lu-v13';
 
 // Fichiers à mettre en cache au démarrage
 const PRECACHE = [
