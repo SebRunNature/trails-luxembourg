@@ -1,6 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <rect width="512" height="512" rx="80" fill="#fd8a00"/>
-  <text x="256" y="200" font-family="Arial, sans-serif" font-weight="900" font-size="140" fill="#fff5e6" text-anchor="middle" dominant-baseline="middle">TRL</text>
-  <text x="256" y="320" font-family="Arial, sans-serif" font-weight="700" font-size="46" fill="rgba(255,245,230,0.7)" text-anchor="middle" dominant-baseline="middle">LUXEMBOURG</text>
-  <path d="M140 400 L200 320 L240 360 L290 280 L340 340 L380 300 L420 400Z" fill="rgba(255,245,230,0.15)" stroke="#fff5e6" stroke-width="3" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img">
+  <title>Run Nature — Trails Luxembourg</title>
+  <desc>Montagne avec sentier pointillé menant à un repère GPS au sommet, dégradé vert forêt sombre</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1d3727"/>
+      <stop offset="100%" stop-color="#0f1a13"/>
+    </linearGradient>
+    <clipPath id="rounded">
+      <rect width="512" height="512" rx="115" ry="115"/>
+    </clipPath>
+  </defs>
+
+  <rect width="512" height="512" rx="115" ry="115" fill="url(#bg)"/>
+
+  <g clip-path="url(#rounded)">
+    <!-- Massif en arrière-plan, à peine visible -->
+    <polygon points="70,392 176,246 236,318 300,206 392,392" fill="#173324" opacity="0.55"/>
+
+    <!-- Montagne principale -->
+    <polygon points="118,392 256,176 394,392" fill="#173324"/>
+    <polygon points="256,176 320,272 292,272 256,222 220,272 192,272" fill="#1d3727"/>
+
+    <!-- Sentier en pointillés serpentant vers le sommet -->
+    <path d="M150,388 C190,352 178,322 214,296 C248,272 226,240 256,206"
+          fill="none" stroke="#00c484" stroke-width="9" stroke-linecap="round"
+          stroke-dasharray="2 22"/>
+
+    <!-- Repère GPS au sommet -->
+    <g transform="translate(256,150)">
+      <path d="M0,-34 C21,-34 36,-19 36,0 C36,24 12,46 0,60 C-12,46 -36,24 -36,0 C-36,-19 -21,-34 0,-34 Z" fill="#00c484"/>
+      <circle cx="0" cy="-2" r="13" fill="#0f1a13"/>
+    </g>
+  </g>
 </svg>
