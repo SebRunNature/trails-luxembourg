@@ -4,12 +4,19 @@
   "description": "Sentiers officiels & homologués du Luxembourg",
   "start_url": ".",
   "scope": ".",
+  "id": ".",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#0c1210",
   "theme_color": "#0c1210",
   "lang": "fr",
   "icons": [
+    {
+      "src": "img/icon_trails.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
     {
       "src": "img/icon-192.png",
       "sizes": "192x192",
