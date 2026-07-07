@@ -1,158 +1,139 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
 <meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem('trailslu_theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0c1210">
 <title>Avertissement – Trails Luxembourg</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 :root{
-  --cream:#f5f0e8;--cream2:#ede7d9;
-  --green:#5a8f6a;--green-dark:#3a6b4a;
-  --text:#1c2b22;--muted:#7a8878;
-  --border:rgba(58,107,74,0.13);
-  --orange:#fd8a00;
-  --paper:#faf8f4;
+  --bg:#0c1210;
+  --surface:#111a15;
+  --surface2:#16211b;
+  --ink:#e8f0ea;
+  --muted:#7d8b81;
+  --border:#1e2b23;
+  --accent:#00a06e;
+  --accent-dim:rgba(0,160,110,0.14);
+  --accent-line:rgba(0,160,110,0.32);
+  --warn:#e0b24d;
+  --warn-bg:rgba(224,178,77,0.10);
+  --warn-line:rgba(224,178,77,0.28);
+  --radius:14px;
+  --radius-sm:10px;
 }
-html,body{min-height:100%;background:var(--paper);font-family:'DM Sans',sans-serif;font-weight:300;color:var(--text);}
+[data-theme="light"]{
+  --bg:#f7f8f6;
+  --surface:#ffffff;
+  --surface2:#f1f4f0;
+  --ink:#17211c;
+  --muted:#6d7a70;
+  --border:#e3e8e2;
+  --accent:#00895f;
+  --accent-dim:rgba(0,137,95,0.09);
+  --accent-line:rgba(0,137,95,0.25);
+  --warn:#a8781f;
+  --warn-bg:rgba(168,120,31,0.09);
+  --warn-line:rgba(168,120,31,0.3);
+}
+html,body{min-height:100%;background:var(--bg);font-family:'Inter',sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;}
 
-/* ── HEADER ── */
-.header{
-  background:linear-gradient(135deg,#2d6e42 0%,#3a8a52 40%,#4aaa64 70%,#5ac878 100%);
-  padding:20px 24px 54px;
-  position:relative;
+.topbar{
+  background:var(--surface);border-bottom:1px solid var(--border);
+  padding:14px 20px;display:flex;align-items:center;gap:13px;
 }
-.header::after{
-  content:'';
-  position:absolute;bottom:0;left:0;right:0;height:52px;
-  background:var(--paper);
-  clip-path:ellipse(55% 100% at 50% 100%);
-}
-.header-inner{position:relative;z-index:2;display:flex;align-items:center;gap:14px;}
 .back-btn{
-  width:36px;height:36px;border-radius:50%;
-  background:rgba(255,255,255,0.2);border:none;
-  display:flex;align-items:center;justify-content:center;
-  cursor:pointer;flex-shrink:0;text-decoration:none;
-  transition:background 0.2s;
+  width:36px;height:36px;border-radius:10px;border:1px solid var(--border);
+  background:var(--surface2);display:flex;align-items:center;justify-content:center;
+  cursor:pointer;flex-shrink:0;text-decoration:none;transition:border-color 0.15s;color:var(--ink);
 }
-.back-btn:hover{background:rgba(255,255,255,0.35);}
-.back-btn svg{width:18px;height:18px;stroke:white;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
-.header-title{
-  font-family:'Fraunces',serif;font-size:20px;font-weight:300;
-  color:white;letter-spacing:0.02em;
-}
+.back-btn:hover{border-color:var(--accent-line);}
+.back-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;}
+.topbar-title{font-size:15px;font-weight:800;letter-spacing:-0.01em;}
+.topbar-sub{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;font-weight:600;}
 
-/* ── CONTENT ── */
-.content{max-width:640px;margin:0 auto;padding:32px 24px 60px;}
+.content{max-width:640px;margin:0 auto;padding:30px 20px 56px;}
+
+.warning-box{
+  background:var(--warn-bg);border:1px solid var(--warn-line);
+  border-radius:var(--radius);padding:16px 18px;margin-bottom:18px;
+}
+.warning-box p{font-size:13px;color:var(--ink);line-height:1.65;}
+.warning-box strong{color:var(--warn);}
 
 .section{
-  background:white;border:1.5px solid var(--border);
-  border-radius:20px;padding:28px 24px;margin-bottom:20px;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:20px 22px;margin-bottom:14px;
 }
-
-.section-icon{
-  width:44px;height:44px;border-radius:14px;
-  background:var(--cream);display:flex;align-items:center;
-  justify-content:center;font-size:22px;margin-bottom:16px;
-}
-
 .section-title{
-  font-family:'Fraunces',serif;font-size:18px;font-weight:400;
-  color:var(--text);margin-bottom:10px;
+  font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.11em;
+  color:var(--accent);margin-bottom:12px;
 }
-
-.section p{
-  font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:10px;
-}
+.section p{font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:10px;}
 .section p:last-child{margin-bottom:0;}
 
-/* ── CHECKLIST ── */
 .checklist{list-style:none;margin:12px 0 0;}
 .checklist li{
-  font-size:13px;color:var(--text);
-  padding:10px 14px;border-radius:12px;
-  background:var(--cream);margin-bottom:8px;
-  display:flex;align-items:flex-start;gap:10px;
-  line-height:1.5;
+  font-size:12.5px;color:var(--ink);
+  padding:11px 14px 11px 34px;border-radius:var(--radius-sm);
+  background:var(--surface2);margin-bottom:7px;
+  line-height:1.5;position:relative;
+}
+.checklist li::before{
+  content:'';position:absolute;left:14px;top:16px;
+  width:6px;height:6px;border-radius:50%;background:var(--accent);
 }
 .checklist li:last-child{margin-bottom:0;}
-.checklist li::before{
-  content:'✓';color:var(--green);font-weight:600;
-  font-size:14px;flex-shrink:0;margin-top:1px;
-}
 
-/* ── WARNING BOX ── */
-.warning-box{
-  background:#fff8f0;border:1.5px solid rgba(253,138,0,0.25);
-  border-radius:16px;padding:18px 20px;margin-bottom:20px;
-  display:flex;gap:14px;align-items:flex-start;
-}
-.warning-box svg{width:22px;height:22px;flex-shrink:0;margin-top:1px;}
-.warning-box p{font-size:13px;color:var(--text);line-height:1.65;}
-.warning-box strong{color:var(--orange);}
+.signature{text-align:center;padding:24px 10px 20px;font-size:13px;color:var(--muted);}
+.signature span{font-size:11px;display:block;margin-top:5px;color:var(--accent);font-weight:600;}
 
-/* ── SIGNATURE ── */
-.signature{
-  text-align:center;padding:24px;
-  font-family:'Fraunces',serif;font-size:15px;font-weight:300;
-  font-style:italic;color:var(--muted);
-}
-
-/* ── FOOTER BTN ── */
-.footer-btn{
-  display:flex;justify-content:center;margin-top:8px;
-}
+.footer-btn{display:flex;justify-content:center;}
 .btn-back{
   display:inline-flex;align-items:center;gap:8px;
-  background:var(--green);color:white;
-  padding:14px 32px;border-radius:50px;
-  font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;
-  text-decoration:none;letter-spacing:0.04em;
-  transition:background 0.2s,transform 0.15s;
+  background:var(--accent);color:#0c1210;
+  padding:13px 28px;border-radius:10px;
+  font-size:13px;font-weight:700;
+  text-decoration:none;transition:opacity 0.15s;
 }
-.btn-back:hover{background:var(--green-dark);transform:translateY(-1px);}
-.btn-back svg{width:16px;height:16px;stroke:white;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+.btn-back:hover{opacity:0.88;}
+.btn-back svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+
+a.inline-link{color:var(--accent);text-decoration:none;font-weight:600;}
+a.inline-link:hover{text-decoration:underline;}
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<div class="header">
-  <div class="header-inner">
-    <a href="index.html" class="back-btn" aria-label="Retour">
-      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-    </a>
-    <div class="header-title">Avertissement</div>
+<div class="topbar">
+  <a href="index.html" class="back-btn" aria-label="Retour">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+  </a>
+  <div>
+    <div class="topbar-title">Avertissement</div>
+    <div class="topbar-sub">Run Nature · Trails Luxembourg</div>
   </div>
 </div>
 
-<!-- CONTENT -->
 <div class="content">
 
-  <!-- Warning box -->
   <div class="warning-box">
-    <svg viewBox="0 0 24 24" fill="none" stroke="#fd8a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
-    </svg>
-    <p><strong>Important :</strong> Les informations disponibles dans cette application sont fournies à titre indicatif. Elles ne remplacent pas une préparation sérieuse et une bonne connaissance du terrain.</p>
+    <p><strong>Important :</strong> les informations disponibles dans cette application sont fournies à titre indicatif. Elles ne remplacent pas une préparation sérieuse et une bonne connaissance du terrain.</p>
   </div>
 
-  <!-- Section 1 -->
   <div class="section">
-    <div class="section-icon">🗺️</div>
-    <div class="section-title">Données GPX & informations des sentiers</div>
+    <div class="section-title">Données GPX &amp; informations des sentiers</div>
     <p>Les tracés GPX, distances, dénivelés et descriptions disponibles dans cette application sont basés sur mes expériences personnelles de terrain.</p>
     <p>Ces données peuvent ne pas refléter l'état actuel des sentiers — fermetures temporaires, modifications de tracé, dégradations météo ou travaux forestiers peuvent survenir à tout moment.</p>
     <p>Je décline toute responsabilité en cas d'accident, blessure, perte ou dommage résultant directement ou indirectement de l'utilisation de ces données.</p>
   </div>
 
-  <!-- Section 2 -->
   <div class="section">
-    <div class="section-icon">⚠️</div>
     <div class="section-title">Ta responsabilité avant de partir</div>
     <p>Randonner et courir en nature comporte des risques inhérents. Tu es le seul responsable de ta sécurité et de celle des personnes qui t'accompagnent.</p>
     <ul class="checklist">
@@ -165,22 +146,18 @@ html,body{min-height:100%;background:var(--paper);font-family:'DM Sans',sans-ser
     </ul>
   </div>
 
-  <!-- Section 3 -->
   <div class="section">
-    <div class="section-icon">📍</div>
     <div class="section-title">Utilisation des fichiers GPX</div>
     <p>Les fichiers GPX sont un outil d'aide à la navigation. Ils ne remplacent pas une carte officielle ni une bonne connaissance du terrain.</p>
     <p>Certains sentiers peuvent manquer de balisage — dans ce cas, le fichier GPX est indispensable. En cas de doute sur ta position ou ta sécurité, fais demi-tour.</p>
-    <p>Pour les tracés officiels homologués, réfère-toi toujours aux informations publiées par <a href="https://www.visitluxembourg.com" target="_blank" style="color:var(--green);">Visit Luxembourg</a> et les gestionnaires locaux.</p>
+    <p>Pour les tracés officiels homologués, réfère-toi toujours aux informations publiées par <a href="https://www.visitluxembourg.com" target="_blank" class="inline-link">Visit Luxembourg</a> et les gestionnaires locaux.</p>
   </div>
 
-  <!-- Signature -->
   <div class="signature">
-    Bonne rando — et surtout, reviens entier ! 🏔️<br>
-    <span style="font-size:12px;margin-top:6px;display:block;">Sébastien – Seb Run Nature</span>
+    Bonne rando — et surtout, reviens entier.
+    <span>Run Nature</span>
   </div>
 
-  <!-- Bouton retour -->
   <div class="footer-btn">
     <a href="index.html" class="btn-back">
       <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
