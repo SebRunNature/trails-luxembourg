@@ -2,13 +2,16 @@
 //  Trails Luxembourg – Service Worker v1.0
 // ═══════════════════════════════════════════
 
-const CACHE_NAME = 'trails-lu-v13';
+const CACHE_NAME = 'trails-lu-v17';
 
 // Fichiers à mettre en cache au démarrage
 const PRECACHE = [
   '/trails-luxembourg/',
   '/trails-luxembourg/index.html',
-  '/trails-luxembourg/manifest.json'
+  '/trails-luxembourg/manifest.json',
+  '/trails-luxembourg/img/icon_trails.svg',
+  '/trails-luxembourg/img/icon-192.png',
+  '/trails-luxembourg/img/icon-512.png'
 ];
 
 // ── Installation : mise en cache initiale ──
